@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild'
 import { execSync } from 'child_process'
 
-// import ddPlugin from 'dd-trace/esbuild.js'
+import ddPlugin from 'dd-trace/esbuild.js'
 
 await esbuild.build({
   entryPoints: ['src/index.ts'],
@@ -10,12 +10,12 @@ await esbuild.build({
   sourcemap: true,
   outfile: 'dist/index.js',
   plugins: [
-    // ddPlugin,
+    ddPlugin,
   ],
   external: [
-    // 'dd-trace',
-    'graphql/language/visitor',
-    'graphql/language/printer',
-    'graphql/utilities',
+    'dd-trace',
+    // 'graphql/language/visitor',
+    // 'graphql/language/printer',
+    // 'graphql/utilities',
   ],
 })
