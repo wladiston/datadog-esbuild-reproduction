@@ -8,6 +8,7 @@
   "dependencies": {
     "dd-trace": "^4.8.1",
     "esbuild": "^0.18.17",
+    "pino": "^8.14.1",
     "winston": "^3.10.0"
   },
   "devDependencies": {
